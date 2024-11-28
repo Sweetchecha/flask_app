@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin: 10px 0;
+}

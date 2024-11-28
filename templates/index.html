@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Items List</h1>
+    <a href="{{ url_for('add_item') }}">Add New Item</a>
+    <ul>
+        {% for item in items %}
+            <li>
+                <strong>{{ item.name }}</strong>: {{ item.description }}
+                <a href="{{ url_for('delete_item', id=item.id) }}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
